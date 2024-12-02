@@ -1,11 +1,71 @@
-header {
-    background-color: grey;
-}
-
 body {
     background-color: brown;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex; /* Active Flexbox */
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center; /* Centre les éléments verticalement */
+    min-height: 100vh; /* Assure que le body prend toute la hauteur de la fenêtre */
+    flex-direction: column; /* Organise les éléments de haut en bas */
+}
+
+/* Header */
+header {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    position: absolute;
+    top: 0;
 }
 
 footer {
     background-color: green;
+    text-align: center;
+    position: absolute;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Barre de navigation */
+.nav-bar {
+    display: flex;
+    align-items: center; /* Aligne verticalement le logo et les liens */
+    gap: 20px; /* Espacement entre les éléments */
+    list-style: none; /* Supprime les puces */
+    margin: 0;
+    padding: 0;
+}
+
+/* Liens */
+.nav-bar li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-bar a:hover {
+    color: blue;
+}
+
+/* Logo */
+#mainLogo {
+    width: 60px; /* Ajustez la taille pour correspondre au texte */
+    height: auto;
+}
+
+#affiche{
+    margin: 30px;
+    background-color: #0cd477;
+    border-radius: 14px;
+    width: 60%; /* Définissez une largeur */
+    height: 200px;
 }
