@@ -1,5 +1,5 @@
 body {
-    background-color: brown;
+    background-color: white;
     margin: 0;
     font-family: Arial, sans-serif;
     text-align: center;
@@ -21,7 +21,7 @@ header {
 }
 
 footer {
-    background-color: green;
+    background-color: #95FFB1;
     text-align: center;
     position: absolute;
     padding: 10px;
@@ -63,9 +63,26 @@ footer {
 }
 
 #affiche{
+    display: flex;
     margin: 30px;
-    background-color: #0cd477;
+    background-color: #259C79;
     border-radius: 14px;
     width: 60%; /* Définissez une largeur */
-    height: 200px;
+    height: 650px;
+    text-align: left;
+    align-items: center;
+}
+
+#afficheTextContent{
+    margin-left: 100px;
+    width: 50%;
+    color: white;
+}
+
+#titleAffiche{
+    font-size: 80px;
+}
+
+#texteAffiche{
+    font-size: 20px;
 }
