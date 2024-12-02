@@ -88,7 +88,7 @@ footer {
 }
 
 #About{
-    margin: 30px;
+    margin: 70px;
     width: 60%;
 }
 
@@ -108,4 +108,43 @@ footer {
     width: 200px; /* Ajustez la taille de l'image */
     height: auto;
     margin-right: 150px;
+}
+
+
+#Rules{
+    display: flex; /* Utiliser Flexbox pour organiser les éléments horizontalement */
+    justify-content: space-between; /* Espacement égal entre le texte et l'image */
+    align-items: center; /* Centrer verticalement */
+    gap: 30px; /* Espacement entre les éléments */
+    margin: 70px;
+}
+
+.separationBarre{
+    width: 10px;
+    height: auto;
+}
+
+#howItWork{
+    font-size: 20px;
+}
+
+.temp{
+    width: 60px;
+    height: auto;
+}
+
+#lastContainer{
+    display: flex; /* Utiliser Flexbox pour organiser les éléments horizontalement */
+    justify-content: space-between; /* Espacement égal entre le texte et l'image */
+    align-items: center; /* Centrer verticalement */
+    gap: 30px; /* Espacement entre les éléments */
+    margin: 70px;
+    background-color: #95ffb16e;
+    border-radius: 14px;
+    width: 80%; /* Définissez une largeur */
+    height: 350px;
+}
+
+.littleContainer{
+    margin: 50px;
 }
