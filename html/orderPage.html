@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BlindTaste - Home</title>
+    <link rel="stylesheet" href="../CSS/orderPage.css"> 
+</head>
+<body>
+    <!-- En-tête de la page -->
+    <header>
+        <nav>
+            <ul class="nav-bar">
+                <li><a href="home.html"><img id="mainLogo" src="../ressources/mainLogo.png" alt="To HomePage"></a></li>
+                <li><a href="#About">A propos</a></li>
+                <li><a href="#Rules">Règles du Jeu</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="form-wrapper">
+        <div class="form-container">
+            <form>
+                <div class="header-container">
+                    <h1>COMMANDE</h1>
+                        <img src="../ressources/fraise.png" alt="fraise" class="header-image">
+                    </div>
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="nom">NOM :</label>
+                                    <input type="text" id="nom" name="nom">
+                                </div>
+                                <div class="form-field">
+                                    <label for="prenom">PRENOM :</label>
+                                    <input type="text" id="prenom" name="prenom">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="email">ADRESSE MAIL :</label>
+                                    <input type="email" id="email" name="email">
+                                </div>
+                                <div class="form-field">
+                                    <label for="telephone">NUMERO DE TEL :</label>
+                                    <input type="tel" id="telephone" name="telephone">
+                                </div>
+                            </div>
+                                <div class="form-field">
+                                    <label for="adresse">ADRESSE DE LIVRAISON/FACTURATION :</label>
+                                    <input type="text" id="adresse" name="adresse">
+                                </div>
+                                <div class="form-field">
+                                    <label for="numCarte">NUM CARTE :</label>
+                                    <input type="text" id="numCarte" name="numCarte">
+                                </div>
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="nomCarte">NOM CARTE :</label>
+                                    <input type="text" id="nomCarte" name="nomCarte">
+                                </div>
+                                <div class="form-field">
+                                    <label for="dateExpiration">DATE EXPI :</label>
+                                    <input type="text" id="dateExpiration" name="dateExpiration">
+                                </div>
+                                <div class="form-field">
+                                    <label for="ccv">CCV :</label>
+                                    <input type="text" id="ccv" name="ccv">
+                                </div>
+                            </div>
+                                <div class="form-checkbox">
+                                    <input type="checkbox" id="terms" name="terms">
+                                    <label for="terms">J'ai lu et j'accepte les conditions de vente</label>
+                                </div>
+                    <button type="submit" class="submit-btn">VALIDER MA COMMANDE</button>
+            </form>
+        </div>
+    </div>
+
+ 
+</body>
+</html>
