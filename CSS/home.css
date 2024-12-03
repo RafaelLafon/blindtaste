@@ -1,13 +1,14 @@
+/* Général */
 body {
     background-color: white;
     margin: 0;
     font-family: Arial, sans-serif;
     text-align: center;
     display: flex; /* Active Flexbox */
+    flex-direction: column; /* Organise les éléments de haut en bas */
     justify-content: center; /* Centre les éléments horizontalement */
     align-items: center; /* Centre les éléments verticalement */
     min-height: 100vh; /* Assure que le body prend toute la hauteur de la fenêtre */
-    flex-direction: column; /* Organise les éléments de haut en bas */
 }
 
 /* Header */
@@ -20,12 +21,13 @@ header {
     top: 0;
 }
 
+/* Footer */
 footer {
     background-color: #95FFB1;
     text-align: center;
-    position: relative;
     padding: 10px;
     width: 100%;
+    position: relative;
     bottom: 0;
 }
 
@@ -39,7 +41,6 @@ footer {
     padding: 0;
 }
 
-/* Liens */
 .nav-bar li {
     display: flex;
     align-items: center;
@@ -58,11 +59,12 @@ footer {
 
 /* Logo */
 #mainLogo {
-    width: 60px; /* Ajustez la taille pour correspondre au texte */
+    width: 60px;
     height: auto;
 }
 
-#affiche{
+/* Section : Affiche */
+#affiche {
     display: flex;
     margin: 30px;
     background-color: #259C79;
@@ -73,21 +75,22 @@ footer {
     align-items: center;
 }
 
-#afficheTextContent{
+#afficheTextContent {
     margin-left: 100px;
     width: 50%;
     color: white;
 }
 
-#titleAffiche{
+#titleAffiche {
     font-size: 80px;
 }
 
-#texteAffiche{
+#texteAffiche {
     font-size: 20px;
 }
 
-#About{
+/* Section : À propos */
+#About {
     margin: 70px;
     width: 60%;
 }
@@ -105,39 +108,40 @@ footer {
 }
 
 #misteryCube {
-    width: 200px; /* Ajustez la taille de l'image */
+    width: 200px;
     height: auto;
     margin-right: 150px;
 }
 
-
-#Rules{
+/* Section : Règles du Jeu */
+#Rules {
     display: flex; /* Utiliser Flexbox pour organiser les éléments horizontalement */
-    justify-content: space-between; /* Espacement égal entre le texte et l'image */
+    justify-content: space-between; /* Espacement égal entre les éléments */
     align-items: center; /* Centrer verticalement */
-    gap: 30px; /* Espacement entre les éléments */
+    gap: 30px;
     margin: 70px;
 }
 
-.separationBarre{
+.separationBarre {
     width: 10px;
     height: auto;
 }
 
-#howItWork{
+#howItWork {
     font-size: 20px;
 }
 
-.temp{
+.temp {
     width: 60px;
     height: auto;
 }
 
-#lastContainer{
+/* Section : Dernier Container */
+#lastContainer {
     display: flex; /* Utiliser Flexbox pour organiser les éléments horizontalement */
-    justify-content: space-between; /* Espacement égal entre le texte et l'image */
+    justify-content: space-between; /* Espacement égal entre les éléments */
     align-items: center; /* Centrer verticalement */
-    gap: 30px; /* Espacement entre les éléments */
+    gap: 30px;
     margin: 70px;
     background-color: #95ffb16e;
     border-radius: 14px;
@@ -145,6 +149,89 @@ footer {
     height: 350px;
 }
 
-.littleContainer{
+.littleContainer {
     margin: 50px;
+}
+
+/* Styles pour le carrousel */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 10px;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    width: 60%; /* Ajustez la largeur du carrousel */
+    border-radius: 10px;
+    background-color: #f6fff8;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px; /* Largeur des cartes */
+    padding: 20px;
+    text-align: center;
+    background-color: #e5ffe7;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.carousel-slide img {
+    width: 100px; /* Taille des images */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.carousel-slide.active {
+    transform: scale(1.1); /* Effet d'agrandissement pour l'élément actif */
+    background-color: #b9f7c9;
+}
+
+.carousel-slide p {
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+}
+
+.carousel-slide p strong {
+    font-size: 20px;
+}
+
+.carousel-btn {
+    background-color: #b9f7c9;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: #95ffb1;
+}
+
+.carousel-btn:active {
+    transform: scale(0.9);
 }

@@ -6,142 +6,140 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BlindTaste - Home</title>
     <link rel="stylesheet" href="../CSS/home.css"> 
+    <script src="../JS/carou.js"></script>
 </head>
 <body>
     <!-- En-tête de la page -->
     <header>
         <nav>
             <ul class="nav-bar">
-                <li><a href="home.html"><img id="mainLogo" src="../ressources/mainLogo.png" alt="To HomePage"></a></li>
-                <li><a href="#About">A propos</a></li>
+                <li>
+                    <a href="home.html">
+                        <img id="mainLogo" src="../ressources/mainLogo.png" alt="To HomePage">
+                    </a>
+                </li>
+                <li><a href="#About">À propos</a></li>
                 <li><a href="#Rules">Règles du Jeu</a></li>
             </ul>
         </nav>
     </header>
-    
 
-    <!-- Contenu principal -->
+    <!-- Section : Affiche -->
     <div class="container" id="affiche">
         <div id="afficheTextContent">
             <h1 id="titleAffiche">MYSTIC CUBE</h1>
             <p id="texteAffiche">
-                <strong>Découvrez le jeu de cartes de découverte des fruits et légumes ! 🍎🌽<br> 
+                <strong>
+                    Découvrez le jeu de cartes de découverte des fruits et légumes ! 🍎🌽<br> 
                     Un outil ludique et éducatif pour éveiller la curiosité des enfants sur la diversité des fruits et légumes.
                 </strong>
             </p>
         </div>
     </div>
 
+    <!-- Section : À propos -->
     <div class="container" id="About">
-            <h1>Nos Box 100% Françaises !🇫🇷</h1>
-            <br>
-            <div id="aboutTextContent">
-                <p id="textAbout">
-                    <strong>
-                        Mystic cube est un jeu éducatif unique pour les enfants ! <br>
-                        Plus qu’un simple jeu de cartes, il propose une véritable aventure sensorielle : <br>
-                        explorez différents fruits et légumes, devinez leur nom grâce à des indices,<br>
-                        et découvrez leurs secrets. <br>
-                        Vos enfants sont-ils prêts à relever le défi gourmand ? 🍇🥕
-                    </strong>
-                </p>
-                <img src="../ressources/unknownCube.png" alt="Mistery Cube" id="misteryCube">
-            </div>
+        <h1>Nos Box 100% Françaises ! 🇫🇷</h1>
+        <div id="aboutTextContent">
+            <p id="textAbout">
+                <strong>
+                    Mystic cube est un jeu éducatif unique pour les enfants ! <br>
+                    Plus qu’un simple jeu de cartes, il propose une véritable aventure sensorielle : <br>
+                    explorez différents fruits et légumes, devinez leur nom grâce à des indices, <br>
+                    et découvrez leurs secrets. <br>
+                    Vos enfants sont-ils prêts à relever le défi gourmand ? 🍇🥕
+                </strong>
+            </p>
+            <img src="../ressources/unknownCube.png" alt="Mistery Cube" id="misteryCube">
+        </div>
     </div>
 
+    <!-- Section : Règles du Jeu -->
     <div class="container" id="Rules">
-        <p id="howItWork">
-            <strong>
-                Comment ça marche?
-            </strong>
-        </p>
+        <h2 id="howItWork">
+            <strong>Comment ça marche ?</strong>
+        </h2>
         <img src="../ressources/barre.png" class="separationBarre">
+
         <div class="littleContainer">
             <img src="../ressources/unknownCube.png" class="temp">
-            <p>
-                Je m'abonne à la <br>
-                box de mon choix
-            </p>
+            <p>Je m'abonne à la box de mon choix</p>
         </div>
         <img src="../ressources/barre.png" class="separationBarre">
+
         <div class="littleContainer">
             <img src="../ressources/unknownCube.png" class="temp">
-            <p>
-                Je reçois ma Box tous <br>
-                les 15 du mois
-            </p>
+            <p>Je reçois ma Box tous les 15 du mois</p>
         </div>
         <img src="../ressources/barre.png" class="separationBarre">
+
         <div class="littleContainer">
             <img src="../ressources/unknownCube.png" class="temp">
             <p>lorem ipsum</p>
         </div>
     </div>
 
+    <!-- Section : Roue de sélection -->
     <div class="container" id="selectionWheel">
-               <!-------------------------- Roue de séléction ----------------------------> 
+        <div class="carousel">
+            <button class="carousel-btn prev">&lt;</button>
+            <div class="carousel-track-container">
+                <ul class="carousel-track">
+                    <li class="carousel-slide">
+                        <img src="../ressources/carotte.png" alt="Carotte">
+                        <p>Carotte</p>
+                    </li>
+                    <li class="carousel-slide active">
+                        <img src="../ressources/pasteque.png" alt="Pastèque">
+                        <p><strong>PASTÈQUE</strong></p>
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="../ressources/gouda.png" alt="Gouda">
+                        <p>Gouda</p>
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="../ressources/gouda.png" alt="Rafifou">
+                        <p>Rafifou</p>
+                    </li>
+                </ul>
+            </div>
+            <button class="carousel-btn next">&gt;</button>
+        </div>             
     </div>
 
+    <!-- Section : Informations supplémentaires -->
     <div class="container" id="lastContainer">
         <div class="littleContainer">
             <img src="../ressources/unknownCube.png" class="temp">
+            <p><strong>PNNS</strong></p>
             <p>
-                <strong>
-                    PNNS
-                </strong>
-            </p>
-            <p>
-                "Notre projet s’inscrit dans les <br>
-                recommandations du PNNS <br>
-                (Programme National Nutrition Santé) <br>
-                en sensibilisant les enfants à la diversité <br>
-                alimentaire et en favorisant une <br>
-                consommation ludique et éducative <br>
-                de fruits et légumes."
+                "Notre projet s’inscrit dans les recommandations du PNNS (Programme National Nutrition Santé) 
+                en sensibilisant les enfants à la diversité alimentaire et en favorisant une consommation ludique 
+                et éducative de fruits et légumes."
             </p>
         </div>
         <div class="littleContainer">
             <img src="../ressources/unknownCube.png" class="temp">
+            <p><strong>Recyclage</strong></p>
             <p>
-                <strong>
-                    Recyclage
-                </strong>
-            </p>
-            <p>
-                "Nous privilégions l'utilisation de <br>
-                carton recyclé dans notre projet, <br>
-                afin de contribuer à la réduction <br>
-                des déchets et promouvoir une <br>
-                approche écoresponsable." 
+                "Nous privilégions l'utilisation de carton recyclé dans notre projet, 
+                afin de contribuer à la réduction des déchets et promouvoir une approche écoresponsable." 
             </p>
         </div>
         <div class="littleContainer">
             <img src="../ressources/unknownCube.png" class="temp">
+            <p><strong>Studio fR</strong></p>
             <p>
-                <strong>
-                    Studio fR
-                </strong>
-            </p>
-            <p>
-                "Le jeu est conçu par un <br>
-                studio français, garantissant <br>
-                une production locale et un <br>
-                savoir-faire de qualité." 
+                "Le jeu est conçu par un studio français, garantissant une production locale 
+                et un savoir-faire de qualité." 
             </p>
         </div>
         <div class="littleContainer">
             <img src="../ressources/unknownCube.png" class="temp">
+            <p><strong>Polyvalent</strong></p>
             <p>
-                <strong>
-                    Polyvalent
-                </strong>
-            </p>
-            <p>
-                "Le jeu est conçu pour les <br>
-                enfants de 5 à 15 ans, offrant <br>
-                une expérience ludique et <br>
-                éducative adaptée à chaque <br>
-                tranche d'âge."
+                "Le jeu est conçu pour les enfants de 5 à 15 ans, offrant une expérience ludique 
+                et éducative adaptée à chaque tranche d'âge."
             </p>
         </div>
     </div>
