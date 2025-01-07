@@ -1,66 +1,57 @@
 <?php
 try {
     // Connexion à la base de données
-    $pdo = new PDO('mysql:host=localhost;dbname=mysticube', 'root', '');
+    $pdo = new PDO('mysql:host=localhost;dbname=blindtaste', 'root', '');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connexion réussie!<br>";
 
     // Vérification si le formulaire a été soumis
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // Données de test pour l'insertion
-        $nom = "Test";
-        $prenom = "User";
-        $email = "test123@example.com"; // Email unique
-        $telephone = "0123456789";
-        $adresse = "Test Address";
-        $numCarte = "1234567812345678";
-        $nomCarte = "Test User";
-        $dateExpirationFormatted = "2024-12-01"; // Format YYYY-MM-DD
-        $ccv = "123";
+        // Récupérer les données du formulaire (assurez-vous que ces champs existent dans votre formulaire)
+        $Name = $_POST['name'] ?? '';
+        $First_Name = $_POST['first_Name'] ?? '';
+        $Mail = $_POST['mail'] ?? '';
+        $Phone_Number = $_POST['phone_Number'] ?? '';
+        $Delivery_Address = $_POST['delivery_Address'] ?? '';
+        $Card_Number = $_POST['card_Number'] ?? '';
+        $Card_Holder_Name = $_POST['card_Holder_Name'] ?? '';
+        $Card_Expiration_Date = $_POST['card_Expiration_Date'] ?? '';
+        $Card_Brand = $_POST['card_Brand'] ?? '';
 
         // Vérifier si l'email existe déjà dans la base de données
-        $stmtCheckEmail = $pdo->prepare("SELECT COUNT(*) FROM commande WHERE Email = :email");
-        $stmtCheckEmail->execute([':email' => $email]);
+        $stmtCheckEmail = $pdo->prepare("SELECT COUNT(*) FROM Command WHERE mail = :mail");
+        $stmtCheckEmail->execute([':mail' => $Mail]);
         $emailExists = $stmtCheckEmail->fetchColumn();
 
         if ($emailExists > 0) {
-            echo "Cet email est déjà utilisé, veuillez en choisir un autre.<br>";
+            echo "Ce Mail est déjà utilisé, veuillez en choisir un autre.";
         } else {
-            // Requête SQL pour insérer les données dans la table Commande
-            $sql = "INSERT INTO commande (Nom, Prenom, Email, Telephone, Adresse_Livraison, Num_Carte, Nom_Carte, Date_Expiration, CCV) 
-                    VALUES (:nom, :prenom, :email, :telephone, :adresse, :numCarte, :nomCarte, :dateExpiration, :ccv)";
+            // Requête SQL pour insérer les données dans la table Command
+            $sql = "INSERT INTO Command (name, first_Name, mail, phone_Number, delivery_Address, card_Number, card_Holder_Name, card_Expiration_Date, card_Brand) 
+                    VALUES (:name, :first_Name, :mail, :phone_Number, :delivery_Address, :card_Number, :card_Holder_Name, :card_Expiration_Date, :card_Brand)";
             $stmt = $pdo->prepare($sql);
-
-            // Log de la requête SQL avant son exécution (pour débogage)
-            echo "Requête SQL : " . $sql . "<br>";
 
             // Exécution de la requête avec les données envoyées
             if ($stmt->execute([
-                ':nom' => $nom, 
-                ':prenom' => $prenom, 
-                ':email' => $email, 
-                ':telephone' => $telephone, 
-                ':adresse' => $adresse, 
-                ':numCarte' => $numCarte, 
-                ':nomCarte' => $nomCarte, 
-                ':dateExpiration' => $dateExpirationFormatted, 
-                ':ccv' => $ccv
+                ':name' => $Name, 
+                ':first_Name' => $First_Name, 
+                ':mail' => $Mail, 
+                ':phone_Number' => $Phone_Number, 
+                ':delivery_Address' => $Delivery_Address, 
+                ':card_Number' => $Card_Number, 
+                ':card_Holder_Name' => $Card_Holder_Name, 
+                ':card_Expiration_Date' => $Card_Expiration_Date, 
+                ':card_Brand' => $Card_Brand
             ])) {
-                // Redirection après l'insertion réussie pour éviter le double envoi
-                header('Location: confirmation.php'); // Redirection vers une page de confirmation
-                exit; // On termine l'exécution du script ici
+                // Redirection après l'insertion réussie
+                header('Location: confirmation.php');
+                exit;
             } else {
-                // Si l'insertion échoue, afficher les erreurs détaillées
-                $errorInfo = $stmt->errorInfo();
-                echo "Erreur lors de l'insertion dans la base de données :<br>";
-                echo "Code d'erreur : " . $errorInfo[0] . "<br>";
-                echo "Message d'erreur : " . $errorInfo[2] . "<br>";
+                echo "Une erreur est survenue lors de l'enregistrement.";
             }
         }
     }
 } catch (PDOException $e) {
     // Gérer les erreurs de connexion PDO
-    echo "Erreur de connexion : " . $e->getCode() . " - " . $e->getMessage() . "<br>";
-    echo "Trace de l'erreur : " . $e->getTraceAsString() . "<br>";
+    echo "Erreur de connexion : " . $e->getMessage();
 }
 ?>
