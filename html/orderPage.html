@@ -18,65 +18,79 @@
             </ul>
         </nav>
     </header>
+    
     <div class="form-wrapper">
         <div class="form-container">
-            <form>
+            <form action="../php/Commande.php" method="POST">
                 <div class="header-container">
                     <h1>COMMANDE</h1>
-                        <img src="../ressources/fraise.png" alt="fraise" class="header-image">
+                    <img src="../ressources/fraise.png" alt="fraise" class="header-image">
+                </div>
+                
+                <!-- Nom et Prénom -->
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="nom">NOM :</label>
+                        <input type="text" id="nom" name="nom" required>
                     </div>
-                            <div class="form-row">
-                                <div class="form-field">
-                                    <label for="nom">NOM :</label>
-                                    <input type="text" id="nom" name="nom">
-                                </div>
-                                <div class="form-field">
-                                    <label for="prenom">PRENOM :</label>
-                                    <input type="text" id="prenom" name="prenom">
-                                </div>
-                            </div>
-                            
-                            <div class="form-row">
-                                <div class="form-field">
-                                    <label for="email">ADRESSE MAIL :</label>
-                                    <input type="email" id="email" name="email">
-                                </div>
-                                <div class="form-field">
-                                    <label for="telephone">NUMERO DE TEL :</label>
-                                    <input type="tel" id="telephone" name="telephone">
-                                </div>
-                            </div>
-                                <div class="form-field">
-                                    <label for="adresse">ADRESSE DE LIVRAISON/FACTURATION :</label>
-                                    <input type="text" id="adresse" name="adresse">
-                                </div>
-                                <div class="form-field">
-                                    <label for="numCarte">NUM CARTE :</label>
-                                    <input type="text" id="numCarte" name="numCarte">
-                                </div>
-                            <div class="form-row">
-                                <div class="form-field">
-                                    <label for="nomCarte">NOM CARTE :</label>
-                                    <input type="text" id="nomCarte" name="nomCarte">
-                                </div>
-                                <div class="form-field">
-                                    <label for="dateExpiration">DATE EXPI :</label>
-                                    <input type="text" id="dateExpiration" name="dateExpiration">
-                                </div>
-                                <div class="form-field">
-                                    <label for="ccv">CCV :</label>
-                                    <input type="text" id="ccv" name="ccv">
-                                </div>
-                            </div>
-                                <div class="form-checkbox">
-                                    <input type="checkbox" id="terms" name="terms">
-                                    <label for="terms">J'ai lu et j'accepte les conditions de vente</label>
-                                </div>
-                    <button type="submit" class="submit-btn">VALIDER MA COMMANDE</button>
+                    <div class="form-field">
+                        <label for="prenom">PRENOM :</label>
+                        <input type="text" id="prenom" name="prenom" required>
+                    </div>
+                </div>
+                
+                <!-- Email et Téléphone -->
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="email">ADRESSE MAIL :</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="telephone">NUMERO DE TEL :</label>
+                        <input type="tel" id="telephone" name="telephone" required>
+                    </div>
+                </div>
+
+                <!-- Adresse de livraison -->
+                <div class="form-field">
+                    <label for="adresse">ADRESSE DE LIVRAISON/FACTURATION :</label>
+                    <input type="text" id="adresse" name="adresse" required>
+                </div>
+                
+                <!-- Informations sur la carte -->
+                <div class="form-field">
+                    <label for="numCarte">NUM CARTE :</label>
+                    <input type="text" id="numCarte" name="numCarte" pattern="\d{16}" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="nomCarte">NOM CARTE :</label>
+                        <input type="text" id="nomCarte" name="nomCarte" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="dateExpiration">DATE EXPI (MM/AA) :</label>
+                        <input type="month" id="dateExpiration" name="dateExpiration" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="ccv">CCV :</label>
+                        <input type="text" id="ccv" name="ccv" pattern="\d{3}" required>
+                    </div>
+                </div>
+                
+                <!-- Conditions d'acceptation -->
+                <div class="form-checkbox">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">J'ai lu et j'accepte les conditions de vente</label>
+                </div>
+                
+                <!-- Bouton de soumission -->
+                <button type="submit" class="submit-btn">VALIDER MA COMMANDE</button>
             </form>
         </div>
     </div>
-
+</body>
+</html>
  
 </body>
 </html>
