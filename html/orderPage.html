@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../CSS/orderPage.css"> 
 </head>
 <body>
-    <!-- En-tête de la page -->
     <header>
         <nav>
             <ul class="nav-bar">
@@ -21,13 +20,12 @@
     
     <div class="form-wrapper">
         <div class="form-container">
-            <form action="../php/Commande.php" method="POST">
+            <form action="/BLINDTASTE/php/Commande.php" method="POST">
                 <div class="header-container">
                     <h1>COMMANDE</h1>
                     <img src="../ressources/fraise.png" alt="fraise" class="header-image">
                 </div>
                 
-                <!-- Nom et Prénom -->
                 <div class="form-row">
                     <div class="form-field">
                         <label for="nom">NOM :</label>
@@ -39,7 +37,6 @@
                     </div>
                 </div>
                 
-                <!-- Email et Téléphone -->
                 <div class="form-row">
                     <div class="form-field">
                         <label for="email">ADRESSE MAIL :</label>
@@ -51,13 +48,11 @@
                     </div>
                 </div>
 
-                <!-- Adresse de livraison -->
                 <div class="form-field">
                     <label for="adresse">ADRESSE DE LIVRAISON/FACTURATION :</label>
                     <input type="text" id="delivery_Address" name="delivery_Address" required>
                 </div>
                 
-                <!-- Informations sur la carte -->
                 <div class="form-field">
                     <label for="numCarte">NUM CARTE :</label>
                     <input type="text" id="card_Number" name="card_Number" pattern="\d{16}" required>
@@ -78,19 +73,16 @@
                     </div>
                 </div>
                 
-                <!-- Conditions d'acceptation -->
                 <div class="form-checkbox">
                     <input type="checkbox" id="terms" name="terms" required>
                     <label for="terms">J'ai lu et j'accepte les conditions de vente</label>
                 </div>
                 
-                <!-- Bouton de soumission -->
-                <button type="submit" class="submit-btn">VALIDER MA COMMANDE</button>
+                <button type="submit" value="envoyer" name="envoyer" class="submit-btn">VALIDER MA COMMANDE</button>
             </form>
         </div>
     </div>
 </body>
 </html>
- 
 </body>
 </html>
