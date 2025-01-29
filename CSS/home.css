@@ -180,3 +180,11 @@ footer {
     justify-content: center;
     border-radius: 14px;
 }
+
+#TopIllu {
+    width: 100%; /* Ajuste la largeur à 100% du conteneur */
+    max-width: 500px; /* Définis une largeur maximale */
+    height: auto; /* Maintient les proportions de l'image */
+    display: block;
+    margin: 0 auto; /* Centre l'image horizontalement */
+}
