@@ -1,0 +1,134 @@
+/* Réinitialisation des styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+/* Barre de navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: white;
+    border-bottom: 2px solid #007bff;
+}
+
+/* Logo */
+.logo img {
+    width: 50px;
+}
+
+/* Liens de navigation */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* Bouton Commander Maintenant */
+.btn-commande {
+    background-color: #ff6584;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Section produit */
+.product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Images */
+.images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.thumbnails img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.main-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Détails du produit */
+.details {
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.info p {
+    background-color: #e8f5e9;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+/* Sélection de la quantité */
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn-minus, .btn-plus {
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Bouton Commander */
+.btn-order {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
