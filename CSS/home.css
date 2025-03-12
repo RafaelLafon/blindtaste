@@ -67,7 +67,7 @@ footer {
     margin: 30px;
     background-color: #259C79;
     border-radius: 14px;
-    width: 60%; /* Définissez une largeur */
+    width: 70%; /* Définissez une largeur */
     height: 650px;
     text-align: left;
     align-items: center;
@@ -147,4 +147,36 @@ footer {
 
 .littleContainer{
     margin: 50px;
+}
+
+.wheelContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Augmenté pour plus d'espacement */
+    max-width: 80%; /* Évite que le contenu s'étale trop */
+}
+
+.wheelItem {
+    width: 250px; /* Taille de l'image */
+    height: auto;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Ombre douce */
+    border-radius: 10px; /* Coins légèrement arrondis pour un effet plus esthétique */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.wheelItem:hover {
+    transform: scale(1.05); /* Effet de zoom léger au survol */
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.4); /* Ombre plus marquée au survol */
+}
+
+
+#selectionWheel {
+    margin: 5%;
+    padding: 40px; /* Ajoute une marge interne pour espacer le contenu */
+    width: 70%; /* Assure que le conteneur prend toute la largeur */
+    background-color: #259C79;
+    display: flex;
+    justify-content: center;
+    border-radius: 14px;
 }
