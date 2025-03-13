@@ -4,61 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Box 54 Cartes</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../CSS/product.css">
 </head>
 <body>
 
-    <!-- Barre de navigation -->
     <header>
         <nav>
-            <div class="nav-left">
-                <div class="logo">
-                    <img src="logo.png" alt="Logo">
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#">À PROPOS</a></li>
-                    <li><a href="#">Visuels</a></li>
-                    <li><a href="#">Règles du jeu</a></li>
-                </ul>
-            </div>
-            <button class="btn-commande">COMMANDER MAINTENANT 🍉</button>
+            <ul class="nav-bar">
+                <li><a href="home.html"><img id="mainLogo" src="../ressources/mainLogo.png" alt="To HomePage"></a></li>
+                <li><a href="#About">A propos</a></li>
+                <li><a href="#Rules">Règles du Jeu</a></li>
+                <li class="btn-container">
+                    <a href="product.html"><button class="btn-commande">COMMANDER MAINTENANT 🍉</button></a>
+                </li>
+            </ul>
         </nav>
     </header>
 
-    <!-- Section Produit -->
     <main>
         <section class="product">
             <div class="images">
                 <div class="thumbnails">
-                    <img src="small-image-1.png" alt="Miniature 1">
-                    <img src="small-image-2.png" alt="Miniature 2">
+                    <img src="../ressources/unknownCube.png" alt="Miniature 1">
+                    <img src="../ressources/unknownCube.png" alt="Miniature 2">
                 </div>
                 <div class="main-image">
-                    <img src="large-image.png" alt="Image principale">
+                    <img src="../ressources/unknownCube.png" alt="Image principale">
                 </div>
             </div>
 
             <div class="details">
+                <!-- Affichage du prix à côté du titre -->
                 <h1>BOX 54 CARTES ~ <span class="old-price">€15</span></h1>
                 <p>100 % Produits Français</p>
 
                 <div class="info">
-                    <p>✔ Livraison sous 7-9 jours ouvrés</p>
+                    <p>
+                        ✔ Livraison sous 7-9 jours ouvrés 
+                        <button class="toggle-btn">➕</button>
+                        <span class="extra-info"> Nous attendons d’avoir + de 30 précommande pour lancer la production afin d’avoir un impact carbone reduit sur nos produit 🌱•</span>
+                    </p>
                     <p>✔ Quantité : 54 cartes</p>
                 </div>
 
-                <!-- Sélection de la quantité -->
                 <div class="quantity">
                     <p>Quantité</p>
                     <button class="btn-minus">➖</button>
-                    <span>1</span>
+                    <span class="quantity-value">1</span> <!-- Affichage de la quantité -->
                     <button class="btn-plus">➕</button>
                 </div>
 
-                <button class="btn-order">Commander</button>
+                <a href="orderPage.html"><button class="btn-order">Commander</button></a>
             </div>
         </section>
+
+        <section class="advantages">
+            <div class="advantage">
+                <h3>Paiement sécurisé</h3>
+                <p><img src="payment-icons.png" alt="Moyens de paiement"></p>
+            </div>
+            <div class="advantage"> 
+                <h3>Livraison rapide et offerte*</h3>
+                <p>Expédition sous 24 à 48h</p>
+            </div>
+            <div class="advantage">
+                <h3>Service client</h3>
+                <p>mysticubes.contact@gmail.com</p>
+            </div>
+        </section>
+    
     </main>
+
+    <script src="../js/product.js"></script>
 
 </body>
 </html>

@@ -62,6 +62,21 @@ footer {
     height: auto;
 }
 
+.btn-commande {
+    background-color: #ff6584;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-container {
+    margin-left: auto; /* Permet de pousser le bouton à droite */
+    margin-right: 10px;
+}
+
 #affiche{
     display: flex;
     margin: 30px;

@@ -51,6 +51,20 @@ header {
     color: blue;
 }
 
+.btn-commande {
+    background-color: #ff6584;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn-container {
+    margin-left: auto; /* Permet de pousser le bouton à droite */
+    margin-right: 10px;
+}
+
 /* Logo */
 #mainLogo {
     width: 60px; /* Ajustez la taille pour correspondre au texte */
@@ -197,3 +211,4 @@ input#adresse, input#numCarte {
     border-radius: 5px; /* Garde les coins arrondis */
     font-size: 14px; /* Assure une taille de texte uniforme */
 }
+
