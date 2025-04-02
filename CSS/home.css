@@ -69,7 +69,7 @@ footer {
 
 #afficheTextContent{
     margin-left: 100px;
-    width: 50%;
+    width: 100%;
     color: white;
 }
 
@@ -214,4 +214,20 @@ header {
 #mainLogo {
     width: 60px; /* Ajustez la taille pour correspondre au texte */
     height: auto;
+}
+
+.block-affiche {
+    display: flex;
+    align-items: right; /* Centre verticalement */
+    gap: 20px; /* Espacement entre le texte et l'image */
+}
+
+#texteAffiche {
+    flex: 1; /* Permet au texte de prendre l'espace disponible */
+}
+
+#deckImage {
+    width: 400px; /* Ajustez la taille de l'image */
+    height: auto;
+    margin-right: 50px;
 }
