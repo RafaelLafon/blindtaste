@@ -60,4 +60,38 @@ document.addEventListener("DOMContentLoaded", function() {
             toggleBtn.textContent = "➕"; // Remet le bouton en +
         }
     });
+
+    // Gestion de l'accordéon pour "Lire plus"
+    const accordionBtn = document.querySelector(".btn-read-more");
+    const accordionContent = document.getElementById("moreText");
+    
+    accordionBtn.addEventListener("click", function() {
+        // Toggle la classe active sur le bouton et le contenu
+        this.classList.toggle("active");
+        accordionContent.classList.toggle("active");
+        
+        // Change le texte du bouton
+        const accordionIcon = this.querySelector(".accordion-icon");
+        const elements = accordionContent.querySelectorAll('h4, p');
+        
+        if (accordionContent.classList.contains("active")) {
+            accordionIcon.textContent = "×"; // Symbole × quand ouvert
+            
+            // Rendre les éléments visibles avec un délai
+            elements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.style.opacity = "1";
+                    el.style.transform = "translateY(0)";
+                }, 50 * index);
+            });
+        } else {
+            accordionIcon.textContent = "+"; // Symbole + quand fermé
+            
+            // Masquer les éléments
+            elements.forEach(el => {
+                el.style.opacity = "0";
+                el.style.transform = "translateY(5px)";
+            });
+        }
+    });
 });
