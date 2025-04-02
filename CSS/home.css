@@ -8,6 +8,9 @@ body {
     align-items: center; /* Centre les éléments verticalement */
     min-height: 100vh; /* Assure que le body prend toute la hauteur de la fenêtre */
     flex-direction: column; /* Organise les éléments de haut en bas */
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -67,7 +70,7 @@ footer {
     margin: 30px;
     background-color: #259C79;
     border-radius: 14px;
-    width: 70%; /* Définissez une largeur */
+    width: 60%; /* Définissez une largeur */
     height: 650px;
     text-align: left;
     align-items: center;
@@ -154,7 +157,7 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 30px; /* Augmenté pour plus d'espacement */
-    max-width: 80%; /* Évite que le contenu s'étale trop */
+    max-width: 70%; /* Évite que le contenu s'étale trop */
 }
 
 .wheelItem {
@@ -173,10 +176,18 @@ footer {
 
 #selectionWheel {
     margin: 5%;
-    padding: 40px; /* Ajoute une marge interne pour espacer le contenu */
-    width: 70%; /* Assure que le conteneur prend toute la largeur */
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 60%; /* Assure que le conteneur prend toute la largeur */
     background-color: #259C79;
     display: flex;
     justify-content: center;
     border-radius: 14px;
+}
+
+.TextDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
 }
