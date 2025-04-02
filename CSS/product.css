@@ -44,18 +44,6 @@ nav {
     font-weight: bold;
 }
 
-/* Bouton Commander Maintenant */
-.btn-commande {
-    background-color: #ff6584;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-left: auto;
-}
-
 /* Section produit */
 .product {
     display: flex;
