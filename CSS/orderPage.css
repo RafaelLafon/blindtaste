@@ -86,10 +86,9 @@ header {
     top: 30px;
 }
 
-/* Conteneur du formulaire avec fond vert */
 .form-container {
-    background-color: #259C79; /* Fond vert */
-    padding: 50px;
+    background-color: #259C79;
+    padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 350px;
@@ -97,8 +96,41 @@ header {
     text-align: center;
     max-height: 90%;
     overflow-y: auto;
-    padding-top: 0px;  
 }
+
+.form-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes de même taille */
+    gap: 20px;
+}
+
+.full-width {
+    grid-column: span 2; /* Occupe les deux colonnes */
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Évite que le padding change la taille */
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;  /* Alignement vertical */
+    gap: 8px;  /* Espacement entre la case et le texte */
+    justify-content: center; /* Centrage horizontal */
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #259C79; /* Personnalisation de la couleur */
+}
+
 
 /* Style du titre */
 h1{

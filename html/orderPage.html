@@ -16,69 +16,29 @@
         </div>
     </header>
     
+    
+
     <div class="form-wrapper">
         <div class="form-container">
-            <form action="/BLINDTASTE/php/Commande.php" method="POST">
-                <div class="header-container">
-                    <h1>COMMANDE</h1>
-                    <img src="../ressources/fraise.png" alt="fraise" class="header-image">
-                </div>
-                
-                <div class="form-row">
-                    <div class="form-field">
-                        <label for="nom">NOM :</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="prenom">PRENOM :</label>
-                        <input type="text" id="first_Name" name="first_Name" required>
-                    </div>
-                </div>
-                
-                <div class="form-row">
-                    <div class="form-field">
-                        <label for="email">ADRESSE MAIL :</label>
-                        <input type="email" id="mail" name="mail" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="telephone">NUMERO DE TEL :</label>
-                        <input type="tel" id="phone_Number" name="phone_Number" required>
-                    </div>
-                </div>
-
-                <div class="form-field">
-                    <label for="adresse">ADRESSE DE LIVRAISON/FACTURATION :</label>
-                    <input type="text" id="delivery_Address" name="delivery_Address" required>
-                </div>
-                
-                <div class="form-field">
-                    <label for="numCarte">NUM CARTE :</label>
-                    <input type="text" id="card_Number" name="card_Number" pattern="\d{16}" required>
-                </div>
-                
-                <div class="form-row">
-                    <div class="form-field">
-                        <label for="nomCarte">NOM CARTE :</label>
-                        <input type="text" id="card_Holder_Name" name="card_Holder_Name" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="dateExpiration">DATE EXPI (MM/AA) :</label>
-                        <input type="month" id="card_Expiration_Date" name="card_Expiration_Date" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="ccv">CCV :</label>
-                        <input type="text" id="card_Brand" name="card_Brand" pattern="\d{3}" required>
-                    </div>
-                </div>
-                
-                <div class="form-checkbox">
-                    <input type="checkbox" id="terms" name="terms" required>
-                    <label for="terms">J'ai lu et j'accepte les conditions de vente</label>
-                </div>
-                
-                <button type="submit" value="envoyer" name="envoyer" class="submit-btn">VALIDER MA COMMANDE</button>
-            </form>
+            <h2>COMMANDE 🍓</h2>
+            <div class="form-group">
+                <input type="text" placeholder="Nom">
+                <input type="text" placeholder="Prénom">
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Adresse Mail">
+                <input type="tel" placeholder="Numéro de Tel">
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Adresse de Facturation" class="full-width">
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox">
+                <span>J'ai lu et j'accepte les conditions de vente</span>
+            </div>
+            <button>VALIDER MA COMMANDE</button>
         </div>
+        
     </div>
 </body>
 </html>
