@@ -1,26 +1,40 @@
 body {
-    background-color: white;
+    background-color: #f8f8f8;
+    margin: 0;
     font-family: Arial, sans-serif;
     text-align: center;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    min-height: 100vh; 
-    flex-direction: column;
-    font-family: Arial, sans-serif;
-    margin: 0;  
-    padding: 0;
-    padding-top: 0px;
+    display: flex; /* Active Flexbox */
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center; /* Centre les éléments verticalement */
+    min-height: 100vh; /* Assure que le body prend toute la hauteur de la fenêtre */
+    flex-direction: column; /* Organise les éléments de haut en bas */
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 /* Header */
 header {
+    display: flex;
+    align-items: center; /* Centre verticalement */
+    justify-content: space-between; /* Place le logo à gauche et le bouton à droite */
     background-color: rgb(255, 255, 255);
     width: 100%;
     border-bottom: 1px solid #ddd;
     padding: 10px 20px;
-    margin-bottom: 20px;  /* Crée un espace sous l'en-tête */
-    position: relative;   /* Assure que l'en-tête reste dans le flux normal */    
+    position: absolute;
+    top: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center; /* Assure l'alignement vertical du logo */
+}
+#mainLogo {
+    width: 60px; /* Ajustez la taille pour correspondre au texte */
+    height: auto;
 }
 
 
@@ -51,12 +65,6 @@ header {
     color: blue;
 }
 
-/* Logo */
-#mainLogo {
-    width: 60px; /* Ajustez la taille pour correspondre au texte */
-    height: auto;
-}
-
 #affiche{
     display: flex;
     margin: 30px;
@@ -74,7 +82,8 @@ header {
 
 /* Conteneur extérieur du formulaire */
 .form-wrapper {
-    margin-top: 60px; /* Ajouter un espace de 80px entre l'en-tête et le formulaire */   
+    position: relative;   
+    top: 30px;
 }
 
 /* Conteneur du formulaire avec fond vert */

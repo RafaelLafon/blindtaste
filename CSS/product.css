@@ -53,11 +53,14 @@ nav {
     border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
+    margin-left: auto;
 }
 
 /* Section produit */
 .product {
     display: flex;
+    position: relative;
+    top: 200px;
     justify-content: center;
     align-items: center;
     gap: 40px;
@@ -131,4 +134,24 @@ h1 {
     border: none;
     cursor: pointer;
     border-radius: 5px;
+}
+header {
+    display: flex;
+    align-items: center; /* Centre verticalement */
+    justify-content: space-between; /* Place le logo à gauche et le bouton à droite */
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    position: relative;
+    top: 0;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center; /* Assure l'alignement vertical du logo */
+}
+#mainLogo {
+    width: 60px; /* Ajustez la taille pour correspondre au texte */
+    height: auto;
 }

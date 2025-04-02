@@ -1,5 +1,5 @@
 body {
-    background-color: white;
+    background-color: #f8f8f8;
     margin: 0;
     font-family: Arial, sans-serif;
     text-align: center;
@@ -63,6 +63,7 @@ footer {
 #mainLogo {
     width: 60px; /* Ajustez la taille pour correspondre au texte */
     height: auto;
+    padding-left: 20px;
 }
 
 #affiche{
@@ -190,4 +191,36 @@ footer {
     flex-direction: column;
     gap: 10px;
     max-width: 300px;
+}
+
+.btn-commande {
+    background-color: #ff6584;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+header {
+    display: flex;
+    align-items: center; /* Centre verticalement */
+    justify-content: space-between; /* Place le logo à gauche et le bouton à droite */
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    position: relative;
+    top: 0;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center; /* Assure l'alignement vertical du logo */
+}
+#mainLogo {
+    width: 60px; /* Ajustez la taille pour correspondre au texte */
+    height: auto;
 }
