@@ -83,21 +83,22 @@ body {
 .thumbnails {
     display: flex;
     flex-direction: column; /* Les petites images s'alignent verticalement */
-    gap: 125px; /* Espacement entre les petites images */
+    gap: 70px; /* Espacement entre les petites images */
 }
 
 /* Petites images */
 .thumbnails img {
-    width: 80px;
+    width: 120px;
     height: auto;
     cursor: pointer;
+    border-radius: 15%;
 }
 
 /* Grande image */
 .main-image img {
     width: 300px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 15%;
 }
 
 /* Détails du produit */
