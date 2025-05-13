@@ -224,3 +224,84 @@ html, body {
     height: auto;
     margin-right: 50px;
 }
+@media screen and (max-width: 1024px) {
+    #affiche {
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+        text-align: center;
+        padding: 20px;
+    }
+
+    #afficheTextContent, #texteAffiche, #titleAffiche {
+        margin: 0;
+        text-align: center;
+    }
+
+    .block-affiche {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    #deckImage {
+        margin: 0;
+        width: 80%;
+    }
+
+    #About {
+        width: 90%;
+        margin: 40px auto;
+    }
+
+    #aboutTextContent {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #textAbout, #misteryCube {
+        margin: 20px 0;
+    }
+
+    #Rules {
+        flex-direction: column;
+        gap: 50px;
+        margin: 40px auto;
+        width: 90%;
+    }
+
+    #lastContainer {
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+        padding: 20px 0;
+    }
+
+    .littleContainer {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .wheelContainer {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .wheelItem {
+        width: 80%;
+    }
+
+    #selectionWheel {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-container {
+        margin: 0;
+    }
+}
