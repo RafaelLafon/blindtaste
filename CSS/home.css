@@ -1,7 +1,7 @@
 body {
+    font-family: Arial, sans-serif;
     background-color: #f8f8f8;
     margin: 0;
-    font-family: Arial, sans-serif;
     text-align: center;
     display: flex; /* Active Flexbox */
     justify-content: center; /* Centre les éléments horizontalement */
@@ -30,6 +30,7 @@ footer {
     list-style: none; /* Supprime les puces */
     margin: 0;
     padding: 0;
+    width: 100%; /* S'assure que la barre occupe toute la largeur */
 }
 
 /* Liens */
@@ -53,7 +54,6 @@ footer {
 #mainLogo {
     width: 60px; /* Ajustez la taille pour correspondre au texte */
     height: auto;
-    padding-left: 20px;
 }
 
 .btn-commande {
@@ -64,6 +64,8 @@ footer {
     border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
+    margin-left: auto;
+    margin-right: 20px;
 }
 
 .btn-container {
@@ -71,7 +73,7 @@ footer {
     margin-right: 10px;
 }
 
-#affiche{
+#affiche {
     display: flex;
     margin: 30px;
     background-color: #259C79;
@@ -82,21 +84,22 @@ footer {
     align-items: center;
 }
 
-#afficheTextContent{
+#afficheTextContent {
     margin-left: 100px;
     width: 100%;
     color: white;
 }
 
-#titleAffiche{
+#titleAffiche {
     font-size: 80px;
 }
 
-#texteAffiche{
+#texteAffiche {
     font-size: 20px;
+    flex: 1; /* Permet au texte de prendre l'espace disponible */
 }
 
-#About{
+#About {
     margin: 70px;
     width: 60%;
 }
@@ -119,8 +122,7 @@ footer {
     margin-right: 150px;
 }
 
-
-#Rules{
+#Rules {
     display: flex; /* Utiliser Flexbox pour organiser les éléments horizontalement */
     justify-content: space-between; /* Espacement égal entre le texte et l'image */
     align-items: center; /* Centrer verticalement */
@@ -128,21 +130,21 @@ footer {
     margin: 70px;
 }
 
-.separationBarre{
+.separationBarre {
     width: 10px;
     height: auto;
 }
 
-#howItWork{
+#howItWork {
     font-size: 20px;
 }
 
-.temp{
+.temp {
     width: 60px;
     height: auto;
 }
 
-#lastContainer{
+#lastContainer {
     display: flex; /* Utiliser Flexbox pour organiser les éléments horizontalement */
     justify-content: space-between; /* Espacement égal entre le texte et l'image */
     align-items: center; /* Centrer verticalement */
@@ -154,7 +156,7 @@ footer {
     height: 350px;
 }
 
-.littleContainer{
+.littleContainer {
     margin: 50px;
 }
 
@@ -179,7 +181,6 @@ footer {
     box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.4); /* Ombre plus marquée au survol */
 }
 
-
 #selectionWheel {
     margin: 5%;
     padding-top: 40px;
@@ -198,18 +199,6 @@ footer {
     max-width: 300px;
 }
 
-.btn-commande {
-    background-color: #ff6584;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-left: auto;
-    margin-right: 20px;
-}
-
 header {
     display: flex;
     align-items: center; /* Centre verticalement */
@@ -226,19 +215,11 @@ header {
     display: flex;
     align-items: center; /* Assure l'alignement vertical du logo */
 }
-#mainLogo {
-    width: 60px; /* Ajustez la taille pour correspondre au texte */
-    height: auto;
-}
 
 .block-affiche {
     display: flex;
     align-items: right; /* Centre verticalement */
     gap: 20px; /* Espacement entre le texte et l'image */
-}
-
-#texteAffiche {
-    flex: 1; /* Permet au texte de prendre l'espace disponible */
 }
 
 #deckImage {
