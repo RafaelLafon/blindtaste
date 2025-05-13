@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #f8f8f8;
     margin: 0;
@@ -257,3 +263,11 @@ input#adresse, input#numCarte {
     font-size: 14px; /* Assure une taille de texte uniforme */
 }
 
+footer {
+    background-color: #95FFB1;
+    text-align: center;
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+}
