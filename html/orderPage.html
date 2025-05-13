@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BlindTaste - Commande</title>
     <link rel="stylesheet" href="../CSS/orderPage.css"> 
+    <script>
+        // Charger les données depuis le localStorage au démarrage
+        function loadCartData() {
+            const storedQuantity = localStorage.getItem('quantity');
+            const storedTotalPrice = localStorage.getItem('totalPrice');
+
+            if (storedQuantity && storedTotalPrice) {
+                document.getElementById('quantity-display').textContent = storedQuantity;
+                document.getElementById('totalPrice').textContent = `${storedTotalPrice} €`;
+                document.getElementById('hiddenQuantity').value = storedQuantity;
+                document.getElementById('hiddenTotalPrice').value = storedTotalPrice;
+                console.log(`Données récupérées depuis le Local Storage : Quantité = ${storedQuantity}, Prix = ${storedTotalPrice}`);
+            } else {
+                console.log('Aucune donnée trouvée dans le Local Storage, affichage des valeurs par défaut.');
+                document.getElementById('quantity-display').textContent = '1';
+                document.getElementById('totalPrice').textContent = '15 €';
+            }
+        }
+        document.addEventListener('DOMContentLoaded', loadCartData);
+    </script>
 </head>
 <body>
     <header>
@@ -20,8 +39,6 @@
             </ul>
         </nav>
     </header>
-    
-    
 
     <div class="form-wrapper">
         <div class="form-container">
@@ -30,79 +47,74 @@
                     <h1>COMMANDE</h1>
                     <img src="../ressources/fraise.png" alt="fraise" class="header-image">
                 </div>
-                
+
                 <!-- Affichage de la quantité et du prix récupérés -->
                 <div class="form-field">
                     <strong>Quantité sélectionnée : <span id="quantity-display">1</span></strong>
+                    <input type="hidden" id="hiddenQuantity" name="quantity">
                 </div>
 
                 <div class="form-field">
-                    <strong>Total: <span id="totalPrice">15</span> €</strong>
+                    <strong>Total : <span id="totalPrice">15</span> €</strong>
+                    <input type="hidden" id="hiddenTotalPrice" name="totalPrice">
                 </div>
 
-                <!-- Formulaire -->
+                <!-- Formulaire de commande -->
                 <div class="form-row">
                     <div class="form-field">
-                        <label for="nom">NOM :</label>
+                        <label for="name">NOM :</label>
                         <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-field">
-                        <label for="prenom">PRENOM :</label>
+                        <label for="first_Name">PRÉNOM :</label>
                         <input type="text" id="first_Name" name="first_Name" required>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-field">
-                        <label for="email">ADRESSE MAIL :</label>
+                        <label for="mail">ADRESSE MAIL :</label>
                         <input type="email" id="mail" name="mail" required>
                     </div>
                     <div class="form-field">
-                        <label for="telephone">NUMERO DE TEL :</label>
+                        <label for="phone_Number">NUMÉRO DE TÉLÉPHONE :</label>
                         <input type="tel" id="phone_Number" name="phone_Number" required>
                     </div>
                 </div>
 
                 <div class="form-field">
-                    <label for="adresse">ADRESSE DE LIVRAISON/FACTURATION :</label>
+                    <label for="delivery_Address">ADRESSE DE LIVRAISON/FACTURATION :</label>
                     <input type="text" id="delivery_Address" name="delivery_Address" required>
                 </div>
-                
+
                 <div class="form-field">
-                    <label for="numCarte">NUM CARTE :</label>
+                    <label for="card_Number">NUMÉRO DE CARTE :</label>
                     <input type="text" id="card_Number" name="card_Number" pattern="\d{16}" required>
                 </div>
-                
+
                 <div class="form-row">
                     <div class="form-field">
-                        <label for="nomCarte">NOM CARTE :</label>
+                        <label for="card_Holder_Name">NOM SUR LA CARTE :</label>
                         <input type="text" id="card_Holder_Name" name="card_Holder_Name" required>
                     </div>
                     <div class="form-field">
-                        <label for="dateExpiration">DATE EXPI (MM/AA) :</label>
+                        <label for="card_Expiration_Date">DATE EXPIRATION (MM/AA) :</label>
                         <input type="month" id="card_Expiration_Date" name="card_Expiration_Date" required>
                     </div>
                     <div class="form-field">
-                        <label for="ccv">CCV :</label>
+                        <label for="card_Brand">CCV :</label>
                         <input type="text" id="card_Brand" name="card_Brand" pattern="\d{3}" required>
                     </div>
                 </div>
 
-                <!-- Sélection de la quantité -->
-                <div class="form-field">
-                    <label for="quantity">QUANTITÉ :</label>
-                    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
-                </div>
-                
                 <div class="form-checkbox">
                     <input type="checkbox" id="terms" name="terms" required>
                     <label for="terms">J'ai lu et j'accepte les conditions de vente</label>
                 </div>
 
-                <button type="submit" value="envoyer" name="envoyer" class="submit-btn">VALIDER MA COMMANDE</button>
+                <button type="submit" class="submit-btn">VALIDER MA COMMANDE</button>
             </form>
         </div>
-        
     </div>
 
     <script src="../js/orderPage.js"></script>
