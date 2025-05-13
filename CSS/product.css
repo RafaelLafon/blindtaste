@@ -64,7 +64,6 @@ body {
 .product {
     display: flex;
     position: relative;
-    top: 200px;
     justify-content: center;
     align-items: center;
     gap: 40px;
@@ -155,7 +154,7 @@ h1 {
 .advantages {
     margin-top: auto; /* Pousse cette section vers le bas */
     width: 100%;
-    background-color: #e8f5e9;
+    background-color: #95FFB1;
     padding: 20px 0;
     text-align: center;
     display: flex;
@@ -203,4 +202,59 @@ main {
     font-size: 18px;
     cursor: pointer;
     margin-left: 5px;
+}
+@media (max-width: 768px) {
+    .product {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .thumbnails {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .thumbnails img {
+        width: 80px;
+    }
+
+    .main-image img {
+        width: 200px;
+    }
+
+    .details {
+        max-width: 100%;
+    }
+
+    .advantages {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Media Queries pour les très petits écrans */
+@media (max-width: 480px) {
+    .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-container {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .thumbnails img {
+        width: 60px;
+    }
+
+    .main-image img {
+        width: 150px;
+    }
 }
