@@ -6,10 +6,10 @@
     <title>BlindTaste - Commande</title>
     <link rel="stylesheet" href="../CSS/orderPage.css"> 
     <script>
-        function loadCartData() {
+    function loadCartData() {
             const storedQuantity = localStorage.getItem('quantity');
             const storedTotalPrice = localStorage.getItem('totalPrice');
-
+ 
             if (storedQuantity && storedTotalPrice) {
                 document.getElementById('quantity-display').textContent = storedQuantity;
                 document.getElementById('totalPrice').textContent = `${storedTotalPrice} €`;
