@@ -32,11 +32,6 @@
         <nav>
             <ul class="nav-bar">
                 <li><a href="home.html"><img id="mainLogo" src="../ressources/mainLogo.png" alt="To HomePage"></a></li>
-                <li><a href="#About">A propos</a></li>
-                <li><a href="#Rules">Règles du Jeu</a></li>
-                <li class="btn-container">
-                    <a href="product.html"><button class="btn-commande">COMMANDER MAINTENANT 🍉</button></a>
-                </li>
             </ul>
         </nav>
     </header>
@@ -50,7 +45,7 @@
                 </div>
 
                 <div class="form-field">
-                    <strong>Quantité sélectionnée : <span id="quantity-display">1</span></strong>
+                    <strong><span id="quantity-display">1</span></strong>
                     <input type="hidden" id="hiddenQuantity" name="quantity">
                 </div>
 
@@ -58,7 +53,7 @@
                     <strong>Total : <span id="totalPrice">15</span></strong>
                     <input type="hidden" id="hiddenTotalPrice" name="totalPrice">
                 </div>
-                
+
                 <!-- Conteneur du bouton PayPal -->
                 <div id="paypal-button-container"></div>
             </form>
@@ -98,5 +93,6 @@
 
     <!-- Script personnel -->
     <script src="../js/orderPage.js"></script>
+
 </body>
 </html>

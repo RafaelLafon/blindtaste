@@ -24,10 +24,7 @@ header {
     display: flex;
     align-items: center; /* Centre verticalement */
     justify-content: space-between; /* Place le logo à gauche et le bouton à droite */
-    background-color: rgb(255, 255, 255);
     width: 100%;
-    border-bottom: 1px solid #ddd;
-    padding: 10px 20px;
     position: absolute;
     top: 0;
     margin: 0;
@@ -39,7 +36,7 @@ header {
     align-items: center; /* Assure l'alignement vertical du logo */
 }
 #mainLogo {
-    width: 60px; /* Ajustez la taille pour correspondre au texte */
+    width: 80px; /* Ajustez la taille pour correspondre au texte */
     height: auto;
 }
 
@@ -52,6 +49,7 @@ header {
     list-style: none; /* Supprime les puces */
     margin: 0;
     padding: 0;
+    width: 100%; /* S'assure que la barre occupe toute la largeur */
 }
 
 /* Liens */
@@ -85,7 +83,7 @@ header {
 }
 /* Logo */
 #mainLogo {
-    width: 60px; /* Ajustez la taille pour correspondre au texte */
+    width: 80px; /* Ajustez la taille pour correspondre au texte */
     height: auto;
 }
 
@@ -108,6 +106,8 @@ header {
 .form-wrapper {
     position: relative;   
     top: 30px;
+    width: 40%;
+    height: auto;
 }
 
 .form-container {
@@ -115,7 +115,7 @@ header {
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 350px;
+    width: 100%;
     color: white;
     text-align: center;
     max-height: 90%;
@@ -231,9 +231,7 @@ input[type="tel"] {
 .form-field:nth-child(3) {
     margin-top: 0px; /* Remonter le champ à la 3e position */
 }
-form {
-    margin-top: 75px; /* Ajoute de l'espace au-dessus du formulaire */
-}
+
 .commande {
     margin-top: 50px; /* Espace au-dessus de la section commande */
     background-color: white; /* Fond blanc pour la section */
@@ -261,13 +259,4 @@ input#adresse, input#numCarte {
     padding: 8px; /* Ajoute un peu d'espace interne */
     border-radius: 5px; /* Garde les coins arrondis */
     font-size: 14px; /* Assure une taille de texte uniforme */
-}
-
-footer {
-    background-color: #95FFB1;
-    text-align: center;
-    position: relative;
-    padding: 10px;
-    width: 100%;
-    bottom: 0;
 }
