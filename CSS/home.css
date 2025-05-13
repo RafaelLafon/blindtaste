@@ -1,16 +1,13 @@
+/* Réinitialisation des styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
-    margin: 0;
-    text-align: center;
-    display: flex; /* Active Flexbox */
-    justify-content: center; /* Centre les éléments horizontalement */
-    align-items: center; /* Centre les éléments verticalement */
-    min-height: 100vh; /* Assure que le body prend toute la hauteur de la fenêtre */
-    flex-direction: column; /* Organise les éléments de haut en bas */
-    max-width: 100%;
-    box-sizing: border-box;
-    overflow-x: hidden;
 }
 
 footer {
@@ -22,7 +19,10 @@ footer {
     bottom: 0;
 }
 
-/* Barre de navigation */
+.logo img {
+    height: 50px; /* Taille du logo, ajuster selon la taille de ton logo */
+}
+
 .nav-bar {
     display: flex;
     align-items: center; /* Aligne verticalement le logo et les liens */
@@ -56,6 +56,20 @@ footer {
     height: auto;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .btn-commande {
     background-color: #ff6584;
     color: white;
@@ -64,8 +78,6 @@ footer {
     border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
-    margin-left: auto;
-    margin-right: 20px;
 }
 
 .btn-container {
@@ -128,6 +140,7 @@ footer {
     align-items: center; /* Centrer verticalement */
     gap: 30px; /* Espacement entre les éléments */
     margin: 70px;
+    text-align: center;
 }
 
 .separationBarre {
@@ -154,6 +167,7 @@ footer {
     border-radius: 14px;
     width: 80%; /* Définissez une largeur */
     height: 350px;
+    text-align: center;
 }
 
 .littleContainer {
@@ -199,26 +213,9 @@ footer {
     max-width: 300px;
 }
 
-header {
-    display: flex;
-    align-items: center; /* Centre verticalement */
-    justify-content: space-between; /* Place le logo à gauche et le bouton à droite */
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    border-bottom: 1px solid #ddd;
-    padding: 10px 20px;
-    position: relative;
-    top: 0;
-}
-
-.nav-left {
-    display: flex;
-    align-items: center; /* Assure l'alignement vertical du logo */
-}
-
 .block-affiche {
     display: flex;
-    align-items: right; /* Centre verticalement */
+    justify-content: flex-end; /* Aligne les éléments à droite */
     gap: 20px; /* Espacement entre le texte et l'image */
 }
 
