@@ -6,7 +6,6 @@
     <title>BlindTaste - Commande</title>
     <link rel="stylesheet" href="../CSS/orderPage.css"> 
     <script>
-        // Charger les données depuis le localStorage au démarrage
         function loadCartData() {
             const storedQuantity = localStorage.getItem('quantity');
             const storedTotalPrice = localStorage.getItem('totalPrice');
@@ -16,11 +15,13 @@
                 document.getElementById('totalPrice').textContent = `${storedTotalPrice} €`;
                 document.getElementById('hiddenQuantity').value = storedQuantity;
                 document.getElementById('hiddenTotalPrice').value = storedTotalPrice;
-                console.log(`Données récupérées depuis le Local Storage : Quantité = ${storedQuantity}, Prix = ${storedTotalPrice}`);
+                console.log(`Quantité = ${storedQuantity}, Prix = ${storedTotalPrice}`);
             } else {
-                console.log('Aucune donnée trouvée dans le Local Storage, affichage des valeurs par défaut.');
                 document.getElementById('quantity-display').textContent = '1';
                 document.getElementById('totalPrice').textContent = '15 €';
+                document.getElementById('hiddenQuantity').value = '1';
+                document.getElementById('hiddenTotalPrice').value = '15';
+                console.log('Aucune donnée trouvée, valeurs par défaut appliquées.');
             }
         }
         document.addEventListener('DOMContentLoaded', loadCartData);
@@ -34,7 +35,7 @@
                 <li><a href="#About">A propos</a></li>
                 <li><a href="#Rules">Règles du Jeu</a></li>
                 <li class="btn-container">
-                    <a href="product.html"> <button class="btn-commande">COMMANDER MAINTENANT 🍉</button></a>
+                    <a href="product.html"><button class="btn-commande">COMMANDER MAINTENANT 🍉</button></a>
                 </li>
             </ul>
         </nav>
@@ -48,7 +49,6 @@
                     <img src="../ressources/fraise.png" alt="fraise" class="header-image">
                 </div>
 
-                <!-- Affichage de la quantité et du prix récupérés -->
                 <div class="form-field">
                     <strong>Quantité sélectionnée : <span id="quantity-display">1</span></strong>
                     <input type="hidden" id="hiddenQuantity" name="quantity">
@@ -59,68 +59,51 @@
                     <input type="hidden" id="hiddenTotalPrice" name="totalPrice">
                 </div>
 
-                <!-- Formulaire de commande -->
-                <div class="form-row">
-                    <div class="form-field">
-                        <label for="name">NOM :</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="first_Name">PRÉNOM :</label>
-                        <input type="text" id="first_Name" name="first_Name" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-field">
-                        <label for="mail">ADRESSE MAIL :</label>
-                        <input type="email" id="mail" name="mail" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="phone_Number">NUMÉRO DE TÉLÉPHONE :</label>
-                        <input type="tel" id="phone_Number" name="phone_Number" required>
-                    </div>
-                </div>
-
-                <div class="form-field">
-                    <label for="delivery_Address">ADRESSE DE LIVRAISON/FACTURATION :</label>
-                    <input type="text" id="delivery_Address" name="delivery_Address" required>
-                </div>
-
-                <div class="form-field">
-                    <label for="card_Number">NUMÉRO DE CARTE :</label>
-                    <input type="text" id="card_Number" name="card_Number" pattern="\d{16}" required>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-field">
-                        <label for="card_Holder_Name">NOM SUR LA CARTE :</label>
-                        <input type="text" id="card_Holder_Name" name="card_Holder_Name" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="card_Expiration_Date">DATE EXPIRATION (MM/AA) :</label>
-                        <input type="month" id="card_Expiration_Date" name="card_Expiration_Date" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="card_Brand">CCV :</label>
-                        <input type="text" id="card_Brand" name="card_Brand" pattern="\d{3}" required>
-                    </div>
-                </div>
-
                 <div class="form-checkbox">
                     <input type="checkbox" id="terms" name="terms" required>
                     <label for="terms">J'ai lu et j'accepte les conditions de vente</label>
                 </div>
 
                 <button type="submit" class="submit-btn">VALIDER MA COMMANDE</button>
+
+                <!-- Conteneur du bouton PayPal -->
+                <div id="paypal-button-container"></div>
             </form>
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Mystic Cube. Tous droits réservés.</p>
-    </footer>
+    <!-- SDK PayPal -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AffFVBj9QkL9wyfEB09kIyoKdfqWR7g52gPiGcBWroj5fVRIbI1CrWMtkkOloClxoItunNLpnrbM83R1&currency=EUR"></script>
 
+
+    <!-- Script PayPal -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            paypal.Buttons({
+                createOrder: function(data, actions) {
+                    const total = document.getElementById('hiddenTotalPrice').value || '15';
+                    return actions.order.create({
+                        purchase_units: [{
+                            amount: {
+                                value: total
+                            }
+                        }]
+                    });
+                },
+                onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(details) {
+                        alert('Paiement effectué par ' + details.payer.name.given_name);
+                        console.log('Transaction réussie : ', details);
+                    });
+                },
+                onError: function(err) {
+                    console.error('Erreur PayPal : ', err);
+                }
+            }).render('#paypal-button-container');
+        });
+    </script>
+
+    <!-- Script personnel -->
     <script src="../js/orderPage.js"></script>
 </body>
 </html>
