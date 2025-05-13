@@ -1,0 +1,259 @@
+body {
+    background-color: #f8f8f8;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex; /* Active Flexbox */
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center; /* Centre les éléments verticalement */
+    min-height: 100vh; /* Assure que le body prend toute la hauteur de la fenêtre */
+    flex-direction: column; /* Organise les éléments de haut en bas */
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center; /* Centre verticalement */
+    justify-content: space-between; /* Place le logo à gauche et le bouton à droite */
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center; /* Assure l'alignement vertical du logo */
+}
+#mainLogo {
+    width: 60px; /* Ajustez la taille pour correspondre au texte */
+    height: auto;
+}
+
+
+/* Barre de navigation */
+.nav-bar {
+    display: flex;
+    align-items: center; /* Aligne verticalement le logo et les liens */
+    gap: 20px; /* Espacement entre les éléments */
+    list-style: none; /* Supprime les puces */
+    margin: 0;
+    padding: 0;
+}
+
+/* Liens */
+.nav-bar li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-bar a:hover {
+    color: blue;
+}
+.btn-commande {
+    background-color: #ff6584;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn-container {
+    margin-left: auto; /* Permet de pousser le bouton à droite */
+    margin-right: 10px;
+}
+/* Logo */
+#mainLogo {
+    width: 60px; /* Ajustez la taille pour correspondre au texte */
+    height: auto;
+}
+
+#affiche{
+    display: flex;
+    margin: 30px;
+    background-color: #259C79;
+    border-radius: 14px;
+    width: 60%; /* Définissez une largeur */
+    height: 650px;
+    text-align: left;
+    align-items: center;
+}
+
+#titleAffiche{
+    font-size: 80px;
+}
+
+/* Conteneur extérieur du formulaire */
+.form-wrapper {
+    position: relative;   
+    top: 30px;
+}
+
+.form-container {
+    background-color: #259C79;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    color: white;
+    text-align: center;
+    max-height: 90%;
+    overflow-y: auto;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes de même taille */
+    gap: 20px;
+}
+
+.full-width {
+    grid-column: span 2; /* Occupe les deux colonnes */
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Évite que le padding change la taille */
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;  /* Alignement vertical */
+    gap: 8px;  /* Espacement entre la case et le texte */
+    justify-content: center; /* Centrage horizontal */
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #259C79; /* Personnalisation de la couleur */
+}
+
+
+/* Style du titre */
+h1{
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Style des champs du formulaire */
+.form-field {
+    margin-bottom: 20px;
+    text-align: left;
+    flex: 1; /* Chaque champ prend une largeur égale */
+    display: flex;
+    flex-direction: column; /* Place le label au-dessus du champ */
+}
+
+/* Style des labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Style des champs de saisie */
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+}
+
+/* Style pour la case à cocher */
+.form-checkbox {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Style du bouton de validation */
+.submit-btn {
+    background-color: #E8FFEE;
+    color: black    ;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.submit-btn:hover {
+    background-color: #e6b800;
+}
+.form-row{
+    display: flex; /* Active l'affichage en ligne des éléments */
+    gap: 30px; /* Espace entre Nom et Prénom */
+    align-items: center; /* Aligne les éléments verticalement */
+    margin-top: 0;
+}
+
+.form-row .form-field:first-child {
+    margin-left: -15px; /* Décale le champ Nom vers la gauche */
+}
+
+.form-row .form-field:last-child {
+    margin-right: 10px; /* Enlever tout écart inutile à droite */
+}
+
+.form-field:nth-child(3) {
+    margin-top: 0px; /* Remonter le champ à la 3e position */
+}
+form {
+    margin-top: 75px; /* Ajoute de l'espace au-dessus du formulaire */
+}
+.commande {
+    margin-top: 50px; /* Espace au-dessus de la section commande */
+    background-color: white; /* Fond blanc pour la section */
+    padding: 20px; /* Espacement interne pour aérer la section */
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 20px; /* Espacement sous le titre et l'image */
+}
+.header-container h1 {
+    margin: 0;  /* Supprime la marge du h1 */
+}
+
+.header-image {
+    width: 25px;   /* Ajustez la taille de l'image */
+    height: auto; /* Maintient les proportions */
+    margin-top: -3px; /* Ajustement vertical léger, si nécessaire */    
+}
+input#adresse, input#numCarte {
+    width: 90%; /* Augmente la largeur des champs */
+    margin: 0 auto; /* Centre horizontalement les champs */
+    padding: 8px; /* Ajoute un peu d'espace interne */
+    border-radius: 5px; /* Garde les coins arrondis */
+    font-size: 14px; /* Assure une taille de texte uniforme */
+}
+

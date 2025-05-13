@@ -1,0 +1,229 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    text-align: center;
+    display: flex; /* Active Flexbox */
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center; /* Centre les éléments verticalement */
+    min-height: 100vh; /* Assure que le body prend toute la hauteur de la fenêtre */
+    flex-direction: column; /* Organise les éléments de haut en bas */
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+footer {
+    background-color: #95FFB1;
+    text-align: center;
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Barre de navigation */
+.nav-bar {
+    display: flex;
+    align-items: center; /* Aligne verticalement le logo et les liens */
+    gap: 20px; /* Espacement entre les éléments */
+    list-style: none; /* Supprime les puces */
+    margin: 0;
+    padding: 0;
+    width: 100%; /* S'assure que la barre occupe toute la largeur */
+}
+
+/* Liens */
+.nav-bar li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-bar a:hover {
+    color: blue;
+}
+
+/* Logo */
+#mainLogo {
+    width: 60px; /* Ajustez la taille pour correspondre au texte */
+    height: auto;
+}
+
+.btn-commande {
+    background-color: #ff6584;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.btn-container {
+    margin-left: auto; /* Permet de pousser le bouton à droite */
+    margin-right: 10px;
+}
+
+#affiche {
+    display: flex;
+    margin: 30px;
+    background-color: #259C79;
+    border-radius: 14px;
+    width: 60%; /* Définissez une largeur */
+    height: 650px;
+    text-align: left;
+    align-items: center;
+}
+
+#afficheTextContent {
+    margin-left: 100px;
+    width: 100%;
+    color: white;
+}
+
+#titleAffiche {
+    font-size: 80px;
+}
+
+#texteAffiche {
+    font-size: 20px;
+    flex: 1; /* Permet au texte de prendre l'espace disponible */
+}
+
+#About {
+    margin: 70px;
+    width: 60%;
+}
+
+#aboutTextContent {
+    display: flex; /* Utiliser Flexbox pour organiser les éléments horizontalement */
+    justify-content: space-between; /* Espacement égal entre le texte et l'image */
+    align-items: center; /* Centrer verticalement */
+}
+
+#textAbout {
+    position: relative;
+    text-align: left;
+    margin-left: 100px;
+}
+
+#misteryCube {
+    width: 200px; /* Ajustez la taille de l'image */
+    height: auto;
+    margin-right: 150px;
+}
+
+#Rules {
+    display: flex; /* Utiliser Flexbox pour organiser les éléments horizontalement */
+    justify-content: space-between; /* Espacement égal entre le texte et l'image */
+    align-items: center; /* Centrer verticalement */
+    gap: 30px; /* Espacement entre les éléments */
+    margin: 70px;
+}
+
+.separationBarre {
+    width: 10px;
+    height: auto;
+}
+
+#howItWork {
+    font-size: 20px;
+}
+
+.temp {
+    width: 60px;
+    height: auto;
+}
+
+#lastContainer {
+    display: flex; /* Utiliser Flexbox pour organiser les éléments horizontalement */
+    justify-content: space-between; /* Espacement égal entre le texte et l'image */
+    align-items: center; /* Centrer verticalement */
+    gap: 30px; /* Espacement entre les éléments */
+    margin: 70px;
+    background-color: #95ffb16e;
+    border-radius: 14px;
+    width: 80%; /* Définissez une largeur */
+    height: 350px;
+}
+
+.littleContainer {
+    margin: 50px;
+}
+
+.wheelContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Augmenté pour plus d'espacement */
+    max-width: 70%; /* Évite que le contenu s'étale trop */
+}
+
+.wheelItem {
+    width: 250px; /* Taille de l'image */
+    height: auto;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Ombre douce */
+    border-radius: 10px; /* Coins légèrement arrondis pour un effet plus esthétique */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.wheelItem:hover {
+    transform: scale(1.05); /* Effet de zoom léger au survol */
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.4); /* Ombre plus marquée au survol */
+}
+
+#selectionWheel {
+    margin: 5%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 60%; /* Assure que le conteneur prend toute la largeur */
+    background-color: #259C79;
+    display: flex;
+    justify-content: center;
+    border-radius: 14px;
+}
+
+.TextDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+}
+
+header {
+    display: flex;
+    align-items: center; /* Centre verticalement */
+    justify-content: space-between; /* Place le logo à gauche et le bouton à droite */
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    position: relative;
+    top: 0;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center; /* Assure l'alignement vertical du logo */
+}
+
+.block-affiche {
+    display: flex;
+    align-items: right; /* Centre verticalement */
+    gap: 20px; /* Espacement entre le texte et l'image */
+}
+
+#deckImage {
+    width: 400px; /* Ajustez la taille de l'image */
+    height: auto;
+    margin-right: 50px;
+}

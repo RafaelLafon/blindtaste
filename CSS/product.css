@@ -1,0 +1,261 @@
+/* Réinitialisation des styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+/* Barre de navigation */
+.nav-bar {
+    display: flex;
+    align-items: center; /* Aligne verticalement le logo et les liens */
+    gap: 20px; /* Espacement entre les éléments */
+    list-style: none; /* Supprime les puces */
+    margin: 0;
+    padding: 0;
+    width: 100%; /* S'assure que la barre occupe toute la largeur */
+}
+
+/* Liens */
+.nav-bar li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-bar a:hover {
+    color: blue;
+}
+
+/* Logo */
+.logo img {
+    width: 50px;
+    margin-right: 20px; /* Espace entre le logo et les liens */
+}
+
+
+/* Bouton Commander Maintenant */
+.btn-commande {
+    background-color: #ff6584;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn-container {
+    margin-left: auto; /* Permet de pousser le bouton à droite */
+    margin-right: 10px;
+}
+/* Section produit */
+/* Section produit */
+.product {
+    display: flex;
+    position: relative;
+    top: 200px;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Conteneur des images (petites et grande image) */
+.images {
+    display: flex;
+    gap: 50px; /* Espacement entre les petites images et l'image principale */
+}
+
+/* Conteneur des petites images */
+.thumbnails {
+    display: flex;
+    flex-direction: column; /* Les petites images s'alignent verticalement */
+    gap: 125px; /* Espacement entre les petites images */
+}
+
+/* Petites images */
+.thumbnails img {
+    width: 80px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Grande image */
+.main-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Détails du produit */
+.details {
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.old-price {
+    color: #ff6584;
+}
+
+.info p {
+    background-color: #e8f5e9;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 25px 0;
+}
+
+/* Sélection de la quantité */
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn-minus, .btn-plus {
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Bouton Commander */
+.btn-order {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#mainLogo {
+    width: 60px; /* Ajustez la taille pour correspondre au texte */
+    height: auto;
+}
+
+.advantages {
+    margin-top: auto; /* Pousse cette section vers le bas */
+    width: 100%;
+    background-color: #e8f5e9;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.advantage img {
+    height: 80px;
+}
+
+h3 {
+    color: #550011;
+    font-weight: bold;
+}
+
+p {
+    color: #444;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Le `main` prend tout l'espace restant */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre le contenu si besoin */
+}
+
+/* Cache le texte au départ */
+.extra-info {
+    display: none;
+    margin-top: 5px; /* Espacement pour plus de clarté */
+}
+
+
+/* Style du bouton + */
+.toggle-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center; /* Aligne verticalement le logo et les liens */
+    gap: 20px; /* Espacement entre les éléments */
+    list-style: none; /* Supprime les puces */
+    margin: 0;
+    padding: 0;
+    width: 100%; /* S'assure que la barre occupe toute la largeur */
+}
+
+.nav-bar li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-bar a:hover {
+    color: blue;
+}
+
+.btn-commande {
+    background-color: #ff6584;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.btn-container {
+    margin-left: auto; /* Permet de pousser le bouton à droite */
+    margin-right: 10px;
+}
+
+header {
+    display: flex;
+    align-items: center; /* Centre verticalement */
+    justify-content: space-between; /* Place le logo à gauche et le bouton à droite */
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    position: relative;
+    top: 0;
+}
+
