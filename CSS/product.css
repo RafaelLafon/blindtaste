@@ -1,4 +1,3 @@
-/* Réinitialisation des styles */
 * {
     margin: 0;
     padding: 0;
@@ -10,18 +9,16 @@ body {
     background-color: #f8f8f8;
 }
 
-/* Barre de navigation */
 .nav-bar {
     display: flex;
-    align-items: center; /* Aligne verticalement le logo et les liens */
-    gap: 20px; /* Espacement entre les éléments */
-    list-style: none; /* Supprime les puces */
+    align-items: center; 
+    gap: 20px;
+    list-style: none; 
     margin: 0;
     padding: 0;
-    width: 100%; /* S'assure que la barre occupe toute la largeur */
+    width: 100%; 
 }
 
-/* Liens */
 .nav-bar li {
     display: flex;
     align-items: center;
@@ -38,14 +35,12 @@ body {
     color: blue;
 }
 
-/* Logo */
 .logo img {
     width: 50px;
-    margin-right: 20px; /* Espace entre le logo et les liens */
+    margin-right: 20px; 
 }
 
 
-/* Bouton Commander Maintenant */
 .btn-commande {
     background-color: #ff6584;
     color: white;
@@ -56,11 +51,10 @@ body {
     font-weight: bold;
 }
 .btn-container {
-    margin-left: auto; /* Permet de pousser le bouton à droite */
+    margin-left: auto; 
     margin-right: 10px;
 }
-/* Section produit */
-/* Section produit */
+
 .product {
     display: flex;
     position: relative;
@@ -72,20 +66,17 @@ body {
     margin: 0 auto;
 }
 
-/* Conteneur des images (petites et grande image) */
 .images {
     display: flex;
-    gap: 50px; /* Espacement entre les petites images et l'image principale */
+    gap: 50px; 
 }
 
-/* Conteneur des petites images */
 .thumbnails {
     display: flex;
-    flex-direction: column; /* Les petites images s'alignent verticalement */
-    gap: 70px; /* Espacement entre les petites images */
+    flex-direction: column; 
+    gap: 70px; 
 }
 
-/* Petites images */
 .thumbnails img {
     width: 120px;
     height: auto;
@@ -93,14 +84,12 @@ body {
     border-radius: 15%;
 }
 
-/* Grande image */
 .main-image img {
     width: 300px;
     height: auto;
     border-radius: 15%;
 }
 
-/* Détails du produit */
 .details {
     max-width: 400px;
 }
@@ -120,7 +109,6 @@ h1 {
     margin: 25px 0;
 }
 
-/* Sélection de la quantité */
 .quantity {
     display: flex;
     align-items: center;
@@ -136,7 +124,6 @@ h1 {
     border-radius: 5px;
 }
 
-/* Bouton Commander */
 .btn-order {
     background-color: black;
     color: white;
@@ -147,12 +134,12 @@ h1 {
 }
 
 #mainLogo {
-    width: 80px; /* Ajustez la taille pour correspondre au texte */
+    width: 80px; 
     height: auto;
 }
 
 .advantages {
-    margin-top: auto; /* Pousse cette section vers le bas */
+    margin-top: auto; 
     width: 100%;
     background-color: #95FFB1;
     padding: 20px 0;
@@ -180,22 +167,19 @@ html, body {
     flex-direction: column;
 }
 
-/* Le `main` prend tout l'espace restant */
 main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centre le contenu si besoin */
+    justify-content: center; 
 }
 
-/* Cache le texte au départ */
 .extra-info {
     display: none;
-    margin-top: 5px; /* Espacement pour plus de clarté */
+    margin-top: 5px; 
 }
 
 
-/* Style du bouton + */
 .toggle-btn {
     background: none;
     border: none;
@@ -238,7 +222,6 @@ main {
     }
 }
 
-/* Media Queries pour les très petits écrans */
 @media (max-width: 480px) {
     .nav-bar {
         flex-direction: column;

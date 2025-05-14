@@ -1,4 +1,3 @@
-/* Réinitialisation des styles */
 * {
     margin: 0;
     padding: 0;
@@ -20,20 +19,19 @@ footer {
 }
 
 .logo img {
-    height: 50px; /* Taille du logo, ajuster selon la taille de ton logo */
+    height: 50px; 
 }
 
 .nav-bar {
     display: flex;
-    align-items: center; /* Aligne verticalement le logo et les liens */
-    gap: 20px; /* Espacement entre les éléments */
-    list-style: none; /* Supprime les puces */
+    align-items: center; 
+    gap: 20px; 
+    list-style: none; 
     margin: 0;
     padding: 0;
-    width: 100%; /* S'assure que la barre occupe toute la largeur */
+    width: 100%; 
 }
 
-/* Liens */
 .nav-bar li {
     display: flex;
     align-items: center;
@@ -50,9 +48,8 @@ footer {
     color: blue;
 }
 
-/* Logo */
 #mainLogo {
-    width: 80px; /* Ajustez la taille pour correspondre au texte */
+    width: 80px; 
     height: auto;
 }
 
@@ -81,7 +78,7 @@ html, body {
 }
 
 .btn-container {
-    margin-left: auto; /* Permet de pousser le bouton à droite */
+    margin-left: auto; 
     margin-right: 10px;
 }
 
@@ -90,7 +87,7 @@ html, body {
     margin: 30px;
     background-color: #259C79;
     border-radius: 14px;
-    width: 60%; /* Définissez une largeur */
+    width: 60%; 
     height: 650px;
     text-align: left;
     align-items: center;
@@ -108,7 +105,7 @@ html, body {
 
 #texteAffiche {
     font-size: 20px;
-    flex: 1; /* Permet au texte de prendre l'espace disponible */
+    flex: 1; 
 }
 
 #About {
@@ -117,9 +114,9 @@ html, body {
 }
 
 #aboutTextContent {
-    display: flex; /* Utiliser Flexbox pour organiser les éléments horizontalement */
-    justify-content: space-between; /* Espacement égal entre le texte et l'image */
-    align-items: center; /* Centrer verticalement */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
 }
 
 #textAbout {
@@ -129,16 +126,16 @@ html, body {
 }
 
 #misteryCube {
-    width: 200px; /* Ajustez la taille de l'image */
+    width: 200px;
     height: auto;
     margin-right: 150px;
 }
 
 #Rules {
-    display: flex; /* Utiliser Flexbox pour organiser les éléments horizontalement */
-    justify-content: space-between; /* Espacement égal entre le texte et l'image */
-    align-items: center; /* Centrer verticalement */
-    gap: 30px; /* Espacement entre les éléments */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 30px; 
     margin: 70px;
     text-align: center;
 }
@@ -158,14 +155,14 @@ html, body {
 }
 
 #lastContainer {
-    display: flex; /* Utiliser Flexbox pour organiser les éléments horizontalement */
-    justify-content: space-between; /* Espacement égal entre le texte et l'image */
-    align-items: center; /* Centrer verticalement */
-    gap: 30px; /* Espacement entre les éléments */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 30px; 
     margin: 70px;
     background-color: #95ffb16e;
     border-radius: 14px;
-    width: 80%; /* Définissez une largeur */
+    width: 80%; 
     height: 350px;
     text-align: center;
 }
@@ -178,28 +175,28 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px; /* Augmenté pour plus d'espacement */
-    max-width: 70%; /* Évite que le contenu s'étale trop */
+    gap: 30px;
+    max-width: 70%; 
 }
 
 .wheelItem {
-    width: 250px; /* Taille de l'image */
+    width: 250px;
     height: auto;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Ombre douce */
-    border-radius: 10px; /* Coins légèrement arrondis pour un effet plus esthétique */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); 
+    border-radius: 10px; 
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .wheelItem:hover {
-    transform: scale(1.05); /* Effet de zoom léger au survol */
-    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.4); /* Ombre plus marquée au survol */
+    transform: scale(1.05); 
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.4); 
 }
 
 #selectionWheel {
     margin: 5%;
     padding-top: 40px;
     padding-bottom: 40px;
-    width: 60%; /* Assure que le conteneur prend toute la largeur */
+    width: 60%; 
     background-color: #259C79;
     display: flex;
     justify-content: center;
@@ -215,12 +212,12 @@ html, body {
 
 .block-affiche {
     display: flex;
-    justify-content: flex-end; /* Aligne les éléments à droite */
-    gap: 20px; /* Espacement entre le texte et l'image */
+    justify-content: flex-end; 
+    gap: 20px;
 }
 
 #deckImage {
-    width: 400px; /* Ajustez la taille de l'image */
+    width: 400px; 
     height: auto;
     margin-right: 50px;
 }
